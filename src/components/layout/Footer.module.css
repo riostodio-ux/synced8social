@@ -1,0 +1,132 @@
+.footer {
+    background-color: var(--color-charcoal);
+    padding: 6rem 0 3rem;
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Layer 1: Brand Closure */
+.closureSection {
+    margin-bottom: 6rem;
+    max-width: 800px;
+}
+
+.closureTitle {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    color: var(--color-white);
+    margin-bottom: 1.5rem;
+}
+
+.closureSubtitle {
+    font-size: 1.25rem;
+    color: var(--color-grey-text);
+    font-weight: 500;
+}
+
+/* Layer 3: Nav Grid */
+.navGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    margin-bottom: 6rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 4rem;
+}
+
+.columnTitle {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-white);
+    margin-bottom: 2rem;
+    opacity: 0.5;
+}
+
+.linkList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.linkList li {
+    margin-bottom: 1rem;
+}
+
+.linkList a {
+    color: var(--color-grey-text);
+    text-decoration: none !important;
+    /* Strict removal */
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.linkList a:hover {
+    color: var(--color-orange-primary);
+    transform: translateX(5px);
+    text-decoration: none !important;
+}
+
+/* Layer 4: Trust Section */
+.trustSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    opacity: 0.7;
+}
+
+.trustText {
+    color: var(--color-white);
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+/* Layer 5: Legal Section */
+.legalSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--color-grey-text);
+    font-size: 0.9rem;
+    opacity: 0.5;
+}
+
+.legalLinks {
+    display: flex;
+    gap: 2rem;
+}
+
+.legalLinks a {
+    color: var(--color-grey-text);
+    text-decoration: none !important;
+    transition: color 0.2s ease;
+}
+
+.legalLinks a:hover {
+    color: var(--color-white);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .closureTitle {
+        font-size: 2.5rem;
+    }
+
+    .navGrid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .legalSection {
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: flex-start;
+    }
+}

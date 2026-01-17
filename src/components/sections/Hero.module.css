@@ -1,0 +1,121 @@
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+    overflow: hidden;
+}
+
+/* System Shape Visuals */
+.systemShape {
+    position: absolute;
+    top: 50%;
+    right: -10%;
+    /* Offset to the right */
+    transform: translateY(-50%);
+    width: 600px;
+    height: 600px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.shapeCore {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(135deg, rgba(232, 69, 5, 0.4), rgba(255, 100, 20, 0.1));
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    filter: blur(80px);
+    animation: pulse 10s infinite alternate ease-in-out;
+}
+
+.shapeOrbit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(232, 69, 5, 0.1);
+    /* Very subtle orbit ring */
+    border-radius: 50%;
+    transform: rotateX(60deg) rotateZ(-20deg);
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1) rotate(0deg);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1.1) rotate(5deg);
+        opacity: 0.7;
+    }
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.headline {
+    font-size: 5rem;
+    line-height: 1.05;
+    margin-bottom: 2.5rem;
+    color: var(--color-white);
+    letter-spacing: -0.03em;
+}
+
+.headline span {
+    color: var(--color-orange-primary);
+}
+
+.subline {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: var(--color-grey-text);
+    margin-bottom: 3rem;
+    max-width: 550px;
+}
+
+.ctaGroup {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.primaryCta {
+    background: linear-gradient(135deg, var(--color-orange-primary), var(--color-orange-secondary));
+    color: var(--color-white);
+    padding: 1rem 3rem;
+    border-radius: 100px;
+    /* Updated to pill shape matching header */
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.primaryCta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(232, 69, 5, 0.4);
+}
+
+@media (max-width: 768px) {
+    .headline {
+        font-size: 3rem;
+    }
+
+    .systemShape {
+        right: -30%;
+        opacity: 0.5;
+    }
+}

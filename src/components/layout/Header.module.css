@@ -1,0 +1,102 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 1.5rem 0;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.headerScrolled {
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    /* Needed for absolute centering */
+}
+
+.logoContainer {
+    position: relative;
+    width: 220px;
+    /* Increased from 180px */
+    height: 55px;
+    /* Increased from 45px */
+    z-index: 2;
+    /* Keep above nav if conflict */
+}
+
+/* Centered Navigation */
+.centeredNav {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    /* Wide, confident spacing */
+}
+
+.navLink {
+    color: var(--color-white);
+    font-family: var(--font-primary);
+    /* Changed to Satoshi for premium look */
+    font-size: 1.15rem;
+    /* Increased size significantly */
+    font-weight: 500;
+    opacity: 0.8;
+    transition: all 0.2s ease;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+}
+
+.navLink:hover {
+    opacity: 1;
+    color: var(--color-orange-primary);
+    transform: translateY(-1px);
+}
+
+.rightAction {
+    z-index: 2;
+}
+
+.ctaButton {
+    /* Strict Two-Tone Gradient */
+    background: linear-gradient(135deg, var(--color-orange-primary), var(--color-orange-secondary));
+    color: var(--color-white);
+    padding: 0.75rem 2rem;
+    border-radius: 100px;
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: -0.01em;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(232, 69, 5, 0.2);
+    display: inline-block;
+    text-decoration: none;
+}
+
+.ctaButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(232, 69, 5, 0.4);
+    background: linear-gradient(135deg, var(--color-orange-secondary), var(--color-orange-primary));
+}
+
+@media (max-width: 900px) {
+    .centeredNav {
+        display: none;
+        /* Mobile handling */
+    }
+}

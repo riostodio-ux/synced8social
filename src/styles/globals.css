@@ -1,0 +1,76 @@
+:root {
+  /* Brand Colors - STRICT Two-Tone Orange */
+  --color-orange-primary: #E84505;
+  --color-orange-secondary: #D43B05;
+
+  /* Neutrals */
+  --color-charcoal: #0a0a0a;
+  --color-charcoal-light: #161616;
+  --color-white: #ffffff;
+  --color-off-white: #f5f5f5;
+  --color-grey-text: #a0a0a0;
+
+  /* Typography Variables */
+  /* Satoshi for Headers (Bold, Modern) */
+  --font-primary: 'Satoshi', sans-serif;
+  /* Inter for Body (Clean, Readable) */
+  --font-secondary: var(--font-inter);
+
+  /* Spacing */
+  --spacing-section: 8rem;
+  --spacing-container: 2rem;
+  --border-radius-lg: 1rem;
+  --border-radius-md: 0.5rem;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-charcoal);
+  color: var(--color-white);
+  font-family: var(--font-primary);
+  /* Updated to Satoshi globally per user request */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+/* Utility Classes */
+.text-orange {
+  color: var(--color-orange-primary);
+}
+
+.bg-orange {
+  background-color: var(--color-orange-primary);
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-container);
+}
+
+/* Updated Star Pattern - Subtler */
+.star-pattern {
+  background-image: radial-gradient(rgba(232, 69, 5, 0.15) 1px, transparent 1px);
+  background-size: 50px 50px;
+}

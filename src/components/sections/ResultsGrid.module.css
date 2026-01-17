@@ -1,0 +1,92 @@
+.section {
+    padding: var(--spacing-section) 0;
+    background-color: var(--color-charcoal);
+    position: relative;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--color-white);
+}
+
+.subtitle {
+    color: var(--color-grey-text);
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.card {
+    padding: 3rem 2rem;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 1.5rem;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(232, 69, 5, 0.3);
+}
+
+.number {
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 1rem;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--color-orange-primary);
+    background: linear-gradient(180deg, var(--color-orange-primary), transparent);
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* Optional: Solid backup or gradient fill */
+    -webkit-text-fill-color: transparent;
+}
+
+/* User previously asked for solid numbers, let's mix it. 
+   Maybe solid at bottom, fading up? Or just solid orange.
+   Let's stick to the styling requested before: solid orange.
+*/
+.number {
+    background: none;
+    -webkit-text-stroke: 0;
+    -webkit-text-fill-color: initial;
+    color: var(--color-orange-primary);
+}
+
+.label {
+    font-size: 1.5rem;
+    color: var(--color-white);
+    margin-bottom: 1rem;
+    font-family: var(--font-primary);
+}
+
+.desc {
+    color: var(--color-grey-text);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+}
