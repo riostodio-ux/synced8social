@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Image from 'next/image';
 import CTA from '@/components/sections/CTA';
 import { StarIcon } from '@/components/ui/StarSystem';
 import { BrandPattern } from '@/components/ui/BrandPattern';
@@ -13,16 +13,37 @@ export default function SocialPage() {
             <section className={styles.heroSection}>
                 <BrandPattern />
                 <div className={`container ${styles.heroContent}`}>
-                    <h1 className={styles.heroTitle}>
-                        Growth on <br />
-                        <span className="text-orange">Autopilot.</span>
-                    </h1>
-                    <p className={styles.heroDesc}>
-                        We handle the noise so you can handle the business. From content growth to customer support chats, we manage your brand's digital voice 24/7.
-                    </p>
-                    <MagneticButton href="/contact">
-                        Delegate Your Social
-                    </MagneticButton>
+                    <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '4rem', alignItems: 'center' }}>
+                        <div>
+                            <h1 className={styles.heroTitle}>
+                                Growth on <br />
+                                <span className="text-orange">Autopilot.</span>
+                            </h1>
+                            <p className={styles.heroDesc}>
+                                We handle the noise so you can handle the business. From content growth to customer support chats, we manage your brand's digital voice 24/7.
+                            </p>
+                            <MagneticButton href="/contact">
+                                Delegate Your Social
+                            </MagneticButton>
+                        </div>
+                        {/* Visual Asset: Growth Graph */}
+                        <div className={styles.heroVisual} style={{ position: 'relative', height: '400px', width: '100%', mixBlendMode: 'lighten' }}>
+                            <div style={{
+                                position: 'absolute',
+                                inset: 0,
+                                background: 'radial-gradient(circle, rgba(232, 69, 5, 0.2) 0%, transparent 70%)',
+                                filter: 'blur(50px)',
+                                zIndex: 0
+                            }} />
+                            <Image
+                                src="/images/social-growth.png"
+                                alt="Social Media Growth Graph"
+                                fill
+                                style={{ objectFit: 'contain', zIndex: 1 }}
+                                priority
+                            />
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -64,6 +85,44 @@ export default function SocialPage() {
                             </ul>
                         </div>
 
+                    </div>
+                </div>
+            </section>
+
+            {/* NEW SECTION: Support Interface Visual */}
+            <section className={styles.section} style={{ background: 'var(--color-charcoal-light)' }}>
+                <div className="container">
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
+                        {/* Visual Asset: Support Interface */}
+                        <div style={{ position: 'relative', height: '500px', width: '100%', mixBlendMode: 'lighten' }}>
+                            <Image
+                                src="/images/social-support.png"
+                                alt="Premium Customer Support Interface"
+                                fill
+                                style={{ objectFit: 'contain' }}
+                            />
+                        </div>
+
+                        <div>
+                            <h2 style={{ fontSize: '3rem', marginBottom: '1.5rem', lineHeight: 1.1, color: 'var(--color-white)' }}>
+                                Real Humans, <br /> <span className="text-orange">Real Speed.</span>
+                            </h2>
+                            <p style={{ fontSize: '1.1rem', color: 'var(--color-grey-text)', marginBottom: '2rem', lineHeight: 1.6 }}>
+                                Chatbots annoy customers. We deploy real, trained support agents who speak your brand's voice and solve problems in under 5 minutes.
+                            </p>
+                            <div className={styles.card} style={{ border: 'none', background: 'transparent', padding: 0 }}>
+                                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
+                                    <div>
+                                        <h3 style={{ fontSize: '2.5rem', color: 'var(--color-white)', fontWeight: 'bold' }}>&lt;5m</h3>
+                                        <p style={{ color: 'var(--color-grey-text)' }}>Response Time</p>
+                                    </div>
+                                    <div>
+                                        <h3 style={{ fontSize: '2.5rem', color: 'var(--color-white)', fontWeight: 'bold' }}>24/7</h3>
+                                        <p style={{ color: 'var(--color-grey-text)' }}>Coverage</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

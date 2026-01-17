@@ -28,7 +28,7 @@ export default function WebsitesPage() {
                             </MagneticButton>
                         </div>
                         {/* Visual Asset: Performance Dashboard */}
-                        <div className={styles.heroVisual} style={{ position: 'relative', height: '400px', width: '100%' }}>
+                        <div className={styles.heroVisual} style={{ position: 'relative', height: '400px', width: '100%', mixBlendMode: 'lighten' }}>
                             <div style={{
                                 position: 'absolute',
                                 inset: 0,
@@ -37,7 +37,7 @@ export default function WebsitesPage() {
                                 zIndex: 0
                             }} />
                             <Image
-                                src="/images/performance-dashboard.png"
+                                src="/images/performance-dashboard-v2.png"
                                 alt="High Performance Website Metrics"
                                 fill
                                 style={{ objectFit: 'contain', zIndex: 1 }}
@@ -51,79 +51,7 @@ export default function WebsitesPage() {
             {/* SECTORS GRID */}
             <section className={styles.section}>
                 <FloatingAccents />
-                <div className={`container ${styles.sectionContent}`}>
-                    <div className={styles.grid}>
-
-                        {/* Card 1: Business / SaaS */}
-                        <div className={styles.card}>
-                            <div className={styles.cardIcon}>
-                                <StarIcon size={32} />
-                            </div>
-                            <h3 className={styles.cardTitle}>Business & SaaS</h3>
-                            <p className={styles.cardDesc}>
-                                Built for trust and conversion. We implement clear value propositions,
-                                automated demo flows, and CRM integrations to turn visitors into qualified leads.
-                            </p>
-                            <ul className={styles.cardList}>
-                                <li>• High-Converting Landing Pages</li>
-                                <li>• Hubspot / Salesforce Integration</li>
-                                <li>• Instant Load Times (Core Web Vitals)</li>
-                            </ul>
-                        </div>
-
-                        {/* Card 2: E-commerce */}
-                        <div className={styles.card}>
-                            <div className={styles.cardIcon}>
-                                <StarIcon size={32} />
-                            </div>
-                            <h3 className={styles.cardTitle}>E-commerce</h3>
-                            <p className={styles.cardDesc}>
-                                Frictionless shopping experiences. We focus on speed, mobile optimization,
-                                and one-click checkout flows to maximize Average Order Value.
-                            </p>
-                            <ul className={styles.cardList}>
-                                <li>• Shopify / WooCommerce Custom builds</li>
-                                <li>• Cart Abandonment Recovery Systems</li>
-                                <li>• Mobile-First UX Design</li>
-                            </ul>
-                        </div>
-
-                        {/* Card 3: Real Estate */}
-                        <div className={styles.card}>
-                            <div className={styles.cardIcon}>
-                                <StarIcon size={32} />
-                            </div>
-                            <h3 className={styles.cardTitle}>Real Estate</h3>
-                            <p className={styles.cardDesc}>
-                                Capture leads before they leave. We build property showcases that load instantly
-                                and capture buyer intent through strategic forms.
-                            </p>
-                            <ul className={styles.cardList}>
-                                <li>• IDX Integration Capability</li>
-                                <li>• Virtual Tour Optimization</li>
-                                <li>• Lead Capture Magnets</li>
-                            </ul>
-                        </div>
-
-                        {/* Card 4: Personal Brand */}
-                        <div className={styles.card}>
-                            <div className={styles.cardIcon}>
-                                <StarIcon size={32} />
-                            </div>
-                            <h3 className={styles.cardTitle}>Personal Brand</h3>
-                            <p className={styles.cardDesc}>
-                                Authority at scale. We build platforms that position you as the expert,
-                                grow your newsletter, and sell your courses or services.
-                            </p>
-                            <ul className={styles.cardList}>
-                                <li>• Newsletter Growth Integration</li>
-                                <li>• Digital Product Sales Funnels</li>
-                                <li>• Media Kits & Press Pages</li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
+                {/* ... existing code ... */}
             </section>
 
             {/* NEW SECTION: Device Agnostic / Responsive */}
@@ -146,9 +74,9 @@ export default function WebsitesPage() {
                             </div>
                         </div>
                         {/* Visual Asset: Responsive Showcase */}
-                        <div style={{ position: 'relative', height: '500px', width: '100%' }}>
+                        <div style={{ position: 'relative', height: '500px', width: '100%', mixBlendMode: 'lighten' }}>
                             <Image
-                                src="/images/responsive-showcase.png"
+                                src="/images/responsive-showcase-v2.png"
                                 alt="Responsive Design Showcase on Multiple Devices"
                                 fill
                                 style={{ objectFit: 'contain' }}
