@@ -36,7 +36,7 @@ export default function ProcessPage() {
                                 zIndex: 0
                             }} />
                             <Image
-                                src="/images/process-architecture.png"
+                                src="/images/process-architecture-v3.png"
                                 alt="System Architecture Diagram"
                                 fill
                                 style={{ objectFit: 'contain', zIndex: 1 }}
@@ -57,7 +57,7 @@ export default function ProcessPage() {
                         {/* Visual Asset: Timeline */}
                         <div style={{ position: 'relative', height: '500px', width: '100%', mixBlendMode: 'lighten' }}>
                             <Image
-                                src="/images/process-timeline.png"
+                                src="/images/process-timeline-v3.png"
                                 alt="Project Workflow Timeline"
                                 fill
                                 style={{ objectFit: 'contain' }}

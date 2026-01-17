@@ -37,7 +37,7 @@ export default function WebsitesPage() {
                                 zIndex: 0
                             }} />
                             <Image
-                                src="/images/performance-dashboard-v2.png"
+                                src="/images/performance-dashboard-v3.png"
                                 alt="High Performance Website Metrics"
                                 fill
                                 style={{ objectFit: 'contain', zIndex: 1 }}
@@ -76,7 +76,7 @@ export default function WebsitesPage() {
                         {/* Visual Asset: Responsive Showcase */}
                         <div style={{ position: 'relative', height: '500px', width: '100%', mixBlendMode: 'lighten' }}>
                             <Image
-                                src="/images/responsive-showcase-v2.png"
+                                src="/images/responsive-showcase-v3.png"
                                 alt="Responsive Design Showcase on Multiple Devices"
                                 fill
                                 style={{ objectFit: 'contain' }}

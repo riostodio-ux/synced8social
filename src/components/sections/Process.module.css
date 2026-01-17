@@ -1,94 +1,88 @@
 .section {
-    padding: var(--spacing-section) 0;
-    background-color: var(--color-charcoal-light);
+    padding: 100px 0;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
 }
 
-.stepsGrid {
+.protocolGrid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
-    margin-top: 4rem;
     position: relative;
 }
 
-/* Connecting line */
-.stepsGrid::before {
-    content: '';
-    position: absolute;
-    top: 35px;
-    /* Aligned with center of the number */
-    left: 40px;
-    right: 40px;
-    height: 1px;
-    background: rgba(232, 69, 5, 0.3);
-    z-index: 0;
-}
-
-.step {
+.protocolStep {
+    display: flex;
+    flex-direction: column;
     position: relative;
-    z-index: 1;
 }
 
-/* Updated Number Style: Solid, No Box */
+.numberContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+/* Large Orange Number */
 .stepNumber {
-    font-family: var(--font-primary);
-    font-size: 4rem;
-    font-weight: 800;
-
-    /* Solid Fill */
+    font-size: 5rem;
+    font-weight: 700;
     color: var(--color-orange-primary);
+    line-height: 1;
+    font-family: var(--font-primary);
+}
 
-    /* No Outline */
-    -webkit-text-stroke: 0;
-
-    /* Transparent Background - Removes the "Black Block" */
-    background: transparent;
-
-    margin-bottom: 1rem;
-    display: inline-block;
-    padding: 0;
-    /* Remove padding that shaped the box */
-
-    /* Optional: Text shadow to make it pop off the line if it intersects */
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+/* Horizontal Line Connector */
+.connector {
+    flex-grow: 1;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    /* Subtle dark mode line */
+    background: linear-gradient(90deg, var(--color-orange-primary) 0%, rgba(255, 255, 255, 0.1) 100%);
+    margin-left: 1rem;
+    margin-right: -2rem;
+    /* Extend into next padding */
+    position: relative;
+    top: 5px;
+    /* Visual adjustment aligned with number center */
 }
 
 .stepTitle {
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
     color: var(--color-white);
+    margin-bottom: 1rem;
+    font-family: var(--font-primary);
 }
 
 .stepDesc {
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: var(--color-grey-text);
-    line-height: 1.5;
+    line-height: 1.6;
+    max-width: 90%;
 }
 
+/* Mobile Responsiveness */
 @media (max-width: 900px) {
-    .section {
-        padding: 4rem 0;
-    }
-
-    .stepsGrid {
+    .protocolGrid {
         grid-template-columns: 1fr;
         gap: 3rem;
-        margin-top: 2rem;
-        text-align: center;
-        /* Center align on mobile */
     }
 
-    .stepsGrid::before {
+    .connector {
         display: none;
+        /* Hide horizontal lines on mobile */
     }
 
     .stepNumber {
-        font-size: 3rem;
-        /* Reduced from 4rem */
+        font-size: 4rem;
+        margin-bottom: 0.5rem;
     }
 
-    .stepDesc {
-        max-width: 400px;
-        margin: 0 auto;
+    .numberContainer {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 1rem;
+        width: 100%;
     }
 }

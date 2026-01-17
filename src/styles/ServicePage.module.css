@@ -12,6 +12,24 @@
     z-index: 2;
 }
 
+/* Force Brand Tint Overlay */
+.heroVisual {
+    position: relative;
+    /* Ensure the container is relative for absolute positioning */
+}
+
+.heroVisual::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--color-orange-primary);
+    mix-blend-mode: color;
+    opacity: 0.5;
+    z-index: 2;
+    pointer-events: none;
+}
+
+
 .heroTitle {
     font-size: 5rem;
     margin-bottom: 2rem;

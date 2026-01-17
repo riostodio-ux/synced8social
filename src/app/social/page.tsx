@@ -36,7 +36,7 @@ export default function SocialPage() {
                                 zIndex: 0
                             }} />
                             <Image
-                                src="/images/social-growth.png"
+                                src="/images/social-growth-v3.png"
                                 alt="Social Media Growth Graph"
                                 fill
                                 style={{ objectFit: 'contain', zIndex: 1 }}
@@ -96,7 +96,7 @@ export default function SocialPage() {
                         {/* Visual Asset: Support Interface */}
                         <div style={{ position: 'relative', height: '500px', width: '100%', mixBlendMode: 'lighten' }}>
                             <Image
-                                src="/images/social-support.png"
+                                src="/images/social-support-v3.png"
                                 alt="Premium Customer Support Interface"
                                 fill
                                 style={{ objectFit: 'contain' }}

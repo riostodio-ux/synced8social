@@ -39,7 +39,7 @@ export default function UpworkPage() {
                                 zIndex: 0
                             }} />
                             <Image
-                                src="/images/profile-stats.png" // Note: Next.js public folder serving
+                                src="/images/profile-stats-v3.png" // Note: Next.js public folder serving
                                 alt="Premium Upwork Profile Stats"
                                 fill
                                 style={{ objectFit: 'contain', zIndex: 1 }}
@@ -102,7 +102,7 @@ export default function UpworkPage() {
                         {/* Visual Asset: Case Study */}
                         <div style={{ position: 'relative', height: '500px', width: '100%', borderRadius: '24px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.05)' }}>
                             <Image
-                                src="/images/case-study.png"
+                                src="/images/case-study-v3.png"
                                 alt="Case Study Metrics"
                                 fill
                                 style={{ objectFit: 'cover' }}
