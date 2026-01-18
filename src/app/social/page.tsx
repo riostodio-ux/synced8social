@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { GrowthGraph } from '@/components/visuals/GrowthGraph';
 import CTA from '@/components/sections/CTA';
 import { StarIcon } from '@/components/ui/StarSystem';
 import { BrandPattern } from '@/components/ui/BrandPattern';
@@ -27,21 +28,8 @@ export default function SocialPage() {
                             </MagneticButton>
                         </div>
                         {/* Visual Asset: Growth Graph */}
-                        <div className={styles.heroVisual} style={{ position: 'relative', height: '400px', width: '100%', mixBlendMode: 'lighten' }}>
-                            <div style={{
-                                position: 'absolute',
-                                inset: 0,
-                                background: 'radial-gradient(circle, rgba(232, 69, 5, 0.2) 0%, transparent 70%)',
-                                filter: 'blur(50px)',
-                                zIndex: 0
-                            }} />
-                            <Image
-                                src="/images/social-growth-v3.png"
-                                alt="Social Media Growth Graph"
-                                fill
-                                style={{ objectFit: 'contain', zIndex: 1 }}
-                                priority
-                            />
+                        <div className={styles.heroVisual} style={{ position: 'relative', height: '400px', width: '100%' }}>
+                            <GrowthGraph />
                         </div>
                     </div>
                 </div>
@@ -94,12 +82,17 @@ export default function SocialPage() {
                 <div className="container">
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
                         {/* Visual Asset: Support Interface */}
-                        <div style={{ position: 'relative', height: '500px', width: '100%', mixBlendMode: 'lighten' }}>
+                        <div style={{ position: 'relative', height: '500px', width: '100%' }}>
                             <Image
                                 src="/images/social-support-v3.png"
                                 alt="Premium Customer Support Interface"
                                 fill
-                                style={{ objectFit: 'contain' }}
+                                style={{
+                                    objectFit: 'contain',
+                                    mixBlendMode: 'lighten',
+                                    maskImage: 'radial-gradient(circle, black 60%, transparent 100%)',
+                                    WebkitMaskImage: 'radial-gradient(circle, black 60%, transparent 100%)'
+                                }}
                             />
                         </div>
 

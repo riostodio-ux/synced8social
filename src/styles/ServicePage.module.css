@@ -12,22 +12,12 @@
     z-index: 2;
 }
 
-/* Force Brand Tint Overlay */
+/* Force Brand Tint Overlay Removed - Causing Side Artifacts */
 .heroVisual {
     position: relative;
     /* Ensure the container is relative for absolute positioning */
 }
 
-.heroVisual::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: var(--color-orange-primary);
-    mix-blend-mode: color;
-    opacity: 0.5;
-    z-index: 2;
-    pointer-events: none;
-}
 
 
 .heroTitle {

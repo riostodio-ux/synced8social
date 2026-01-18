@@ -74,8 +74,8 @@ export default function Footer() {
                         <h4 className={styles.columnTitle}>Services</h4>
                         <ul className={styles.linkList}>
                             <li><Link href="/websites">High-Performance Websites</Link></li>
-                            <li><Link href="/websites">E-commerce Solutions</Link></li>
-                            <li><Link href="/websites">Real Estate Platforms</Link></li>
+                            <li><Link href="/ecommerce">E-commerce Solutions</Link></li>
+                            <li><Link href="/real-estate">Real Estate Platforms</Link></li>
                             <li><Link href="/upwork">Upwork Optimization</Link></li>
                             <li><Link href="/social">Social & Customer Support</Link></li>
                         </ul>

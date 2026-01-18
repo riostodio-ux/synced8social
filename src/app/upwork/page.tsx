@@ -100,23 +100,29 @@ export default function UpworkPage() {
                 <div className="container">
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
                         {/* Visual Asset: Case Study */}
-                        <div style={{ position: 'relative', height: '500px', width: '100%', borderRadius: '24px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.05)' }}>
+                        <div style={{ position: 'relative', height: '400px', width: '100%', borderRadius: '24px', overflow: 'hidden' }}>
                             <Image
                                 src="/images/case-study-v3.png"
                                 alt="Case Study Metrics"
                                 fill
-                                style={{ objectFit: 'cover' }}
+                                style={{
+                                    objectFit: 'contain',
+                                    padding: '2rem',
+                                    mixBlendMode: 'lighten',
+                                    maskImage: 'radial-gradient(circle, black 60%, transparent 100%)',
+                                    WebkitMaskImage: 'radial-gradient(circle, black 60%, transparent 100%)'
+                                }}
                             />
                             <div style={{
                                 position: 'absolute',
                                 bottom: 0,
                                 left: 0,
                                 width: '100%',
-                                padding: '2rem',
-                                background: 'linear-gradient(to top, rgba(0,0,0,0.9), transparent)'
+                                padding: '1.5rem 2rem',
+                                background: 'linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%)'
                             }}>
-                                <h4 style={{ color: 'white', fontSize: '1.5rem', marginBottom: '0.5rem' }}>TechFlow Systems</h4>
-                                <p style={{ color: 'var(--color-orange-primary)' }}>+300% Lead Volume</p>
+                                <h4 style={{ color: 'white', fontSize: '1.5rem', marginBottom: '0.2rem', fontWeight: '600' }}>TechFlow Systems</h4>
+                                <p style={{ color: 'var(--color-orange-primary)', fontSize: '1rem', fontWeight: '500' }}>+300% Lead Volume</p>
                             </div>
                         </div>
 
