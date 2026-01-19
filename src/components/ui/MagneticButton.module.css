@@ -72,3 +72,10 @@
     mix-blend-mode: overlay;
     transition: opacity 0.3s ease;
 }
+
+@media (max-width: 900px) {
+    .magneticBtn {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+}

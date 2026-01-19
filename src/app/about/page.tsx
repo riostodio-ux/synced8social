@@ -1,4 +1,5 @@
 import CTA from '@/components/sections/CTA';
+import styles from '@/styles/ServicePage.module.css';
 
 export default function AboutPage() {
     return (
@@ -14,7 +15,7 @@ export default function AboutPage() {
 
             <div style={{ padding: '100px 0' }}>
                 <div className="container">
-                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem' }}>
+                    <div className={styles.grid}>
                         <div>
                             <h3 style={{ fontSize: '2rem', marginBottom: '1rem' }}>The Philosophy</h3>
                             <p style={{ color: 'var(--color-grey-text)', lineHeight: '1.6' }}>

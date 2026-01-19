@@ -14,7 +14,7 @@ export default function WebsitesPage() {
             <section className={styles.heroSection}>
                 <BrandPattern />
                 <div className={`container ${styles.heroContent}`}>
-                    <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '4rem', alignItems: 'center' }}>
+                    <div className={styles.heroGrid}>
                         <div>
                             <p className={styles.heroSubtitle}>
                                 Your site shouldn&apos;t just look good. It should print money.

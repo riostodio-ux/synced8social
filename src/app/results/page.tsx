@@ -13,7 +13,7 @@ export default function ResultsPage() {
             <section className={styles.heroSection}>
                 <BrandPattern />
                 <div className={`container ${styles.heroContent}`}>
-                    <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '4rem', alignItems: 'center' }}>
+                    <div className={styles.heroGrid}>
                         <div>
                             <h1 className={styles.heroTitle}>
                                 Logic. Systems. <br />

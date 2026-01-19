@@ -102,10 +102,7 @@
     transform: translateX(20px);
 }
 
-.hamburger.open::after {
-    /* Creating the X shape if using 3 lines, or using just 2 lines with pseudo elements */
-    /* Simplified logic: using 2 lines that rotate */
-}
+
 
 /* Refined Hamburger logic for 2 lines */
 .hamburger {
@@ -189,8 +186,9 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 14px;
-        /* Tight height for 2 lines */
+        height: 18px;
+        width: 24px;
+        /* Balanced height/width for mobile */
     }
 
     .desktopCTA {
@@ -205,8 +203,8 @@
     }
 
     .logoContainer {
-        width: 160px;
-        /* Smaller Logo on mobile */
-        height: 40px;
+        width: 200px;
+        /* Increased from 160px for better visibility */
+        height: 50px;
     }
 }
